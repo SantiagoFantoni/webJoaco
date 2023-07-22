@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import AudioPlayer from "./components/AudioPlayer";
+import Pictures from "./components/Pictures";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 		<>
 			<Banner path={"../images/peñarol.png"}></Banner>
 			<AudioPlayer></AudioPlayer>
+			<Pictures></Pictures>
 		</>
 	);
 }

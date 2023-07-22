@@ -17,10 +17,10 @@ a:hover {
 body {
 	margin: 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 	min-width: 320px;
 	min-height: 100vh;
+	color: gold;
 }
 
 h1 {
@@ -48,18 +48,26 @@ button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
-}
 .banner-img {
 	height: 20rem;
+}
+.banner-img:hover {
+	transform: scaleX(10px);
+	transform: scaleY(10px);
+	transition: all 0.3s;
+}
+.music-container {
+	border: 1px solid;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+.pictures {
+	margin-top: 2rem;
+	width: 70%;
+}
+.pictures:hover {
+	transition: all 0.3s;
+	box-shadow: 2px 2px 2px white;
+	transform: scaleX(10px);
 }
