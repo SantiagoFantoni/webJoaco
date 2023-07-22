@@ -3,7 +3,7 @@ import { useState } from "react";
 function Pictures() {
 	const imageList = [
 		{ url: "/images/pasta.jpg" },
-		{ url: "/images/peñarol.png" },
+		{ url: "/images/pibes.jpg" },
 	];
 	const [images, setImages] = useState(imageList);
 	const [currentImage, setCurrentImage] = useState(images[0]);
