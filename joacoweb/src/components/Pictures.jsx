@@ -9,12 +9,11 @@ function Pictures() {
 	const [currentImage, setCurrentImage] = useState(images[0]);
 	let index = 0;
 	function nextImage() {
-		if (index < images.length) {
-			index++;
-			setCurrentImage(imageList[index]);
+		const index = images.findIndex((x) => x.url == currentImage.url);
+		if (index == imageList.length - 1) {
+			setCurrentImage(images[0]);
 		} else {
-			index = 0;
-			setCurrentImage(imageList[index]);
+			setCurrentImage(images[index + 1]);
 		}
 	}
 	return (
