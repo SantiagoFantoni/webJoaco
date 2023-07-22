@@ -7,6 +7,10 @@ function AudioPlayer() {
 			audio: new Audio("/music/pibes_chorros_que_calor.mp3"),
 			title: "Que calor",
 		},
+		{
+			audio: new Audio("/music/Comadre_Compadre.mp3"),
+			title: "Compadre comadre",
+		},
 	];
 	const [songs, setSongs] = useState(playList);
 	const [playing, setPlaying] = useState(false);
@@ -22,25 +26,31 @@ function AudioPlayer() {
 	}, [playing]);
 
 	function handlePrev() {
-		if (index > -1) {
-			index--;
-			setSong(playList[index]);
+		const index = songs.findIndex((x) => x.title == currentSong.title);
+		if (index == 0) {
+			setCurrentSong(songs[songs.length - 1]);
+		} else {
+			setCurrentSong(songs[index - 1]);
 		}
 	}
 	function handlePlayPause() {
 		setPlaying(!playing);
 	}
 	function handleNext() {
-		if (index < playList.length - 1) index++;
-		setSong(playList[index]);
+		const index = songs.findIndex((x) => x.title == currentSong.title);
+		if (index == songs.length - 1) {
+			setCurrentSong(songs[0]);
+		} else {
+			setCurrentSong(songs[index + 1]);
+		}
 	}
 	return (
 		<>
 			<audio src={currentSong.audio} />
 			<div className='music-container'>
-				<span>atras</span>
+				<span onClick={handlePrev}>atras</span>
 				<span onClick={handlePlayPause}>{currentSong.title}</span>
-				<span>prox</span>
+				<span onClick={handleNext}>prox</span>
 			</div>
 		</>
 	);
