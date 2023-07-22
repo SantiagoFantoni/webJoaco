@@ -56,13 +56,13 @@ button:focus-visible {
 }
 @keyframes moveLeft {
 	from {
-		translate: 80px;
+		translate: 35%;
 	}
 	50% {
-		translate: -80px;
+		translate: -35%;
 	}
 	to {
-		translate: 80px;
+		translate: 35%;
 	}
 }
 .song-title {
@@ -72,8 +72,12 @@ button:focus-visible {
 	margin-bottom: 5px;
 	overflow: hidden;
 	transition: all 0.3s;
-	animation: moveLeft 5s;
+	animation: moveLeft 9s;
 	animation-iteration-count: infinite;
+}
+.icon {
+	font-size: 2rem;
+	border-radius: 50%;
 }
 .pictures {
 	margin-top: 2rem;

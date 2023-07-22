@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { GrCirclePlay } from "react-icons/gr";
+import { FiSkipBack, FiSkipForward, FiPlayCircle } from "react-icons/fi";
 
 function AudioPlayer() {
 	const playList = [
@@ -50,9 +50,15 @@ function AudioPlayer() {
 			<audio src={currentSong.audio} />
 			<div className='music-container'>
 				<div className='song-title'>{currentSong.title}</div>
-				<span onClick={handlePrev}>Atras</span>
-				<span onClick={handlePlayPause}>Play</span>
-				<span onClick={handleNext}>Siguiente</span>
+				<span onClick={handlePrev}>
+					<FiSkipBack className='icon' />
+				</span>
+				<span onClick={handlePlayPause}>
+					<FiPlayCircle className='icon' />
+				</span>
+				<span onClick={handleNext}>
+					<FiSkipForward className='icon' />
+				</span>
 			</div>
 		</>
 	);
