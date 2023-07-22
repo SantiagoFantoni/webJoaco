@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { GrCirclePlay } from "react-icons/gr";
 
 function AudioPlayer() {
 	const playList = [
@@ -48,9 +49,10 @@ function AudioPlayer() {
 		<>
 			<audio src={currentSong.audio} />
 			<div className='music-container'>
-				<span onClick={handlePrev}>atras</span>
-				<span onClick={handlePlayPause}>{currentSong.title}</span>
-				<span onClick={handleNext}>prox</span>
+				<div className='song-title'>{currentSong.title}</div>
+				<span onClick={handlePrev}>Atras</span>
+				<span onClick={handlePlayPause}>Play</span>
+				<span onClick={handleNext}>Siguiente</span>
 			</div>
 		</>
 	);
