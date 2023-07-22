@@ -53,24 +53,25 @@ button:focus-visible {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	overflow: hidden;
 }
 @keyframes moveLeft {
 	from {
-		translate: 35%;
+		translate: 30%;
 	}
 	50% {
-		translate: -35%;
+		translate: -30%;
 	}
 	to {
-		translate: 35%;
+		translate: 30%;
 	}
 }
 .song-title {
 	width: 100%;
+	text-align: center;
 	font-size: large;
 	font-weight: 700;
 	margin-bottom: 5px;
-	overflow: hidden;
 	transition: all 0.3s;
 	animation: moveLeft 9s;
 	animation-iteration-count: infinite;
