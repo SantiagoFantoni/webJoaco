@@ -89,3 +89,20 @@ button:focus-visible {
 	box-shadow: 2px 2px 2px white;
 	transform: scaleX(10px);
 }
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: x-large;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+.chat-box {
+	height: 33rem;
+	width: 32rem;
+	border: 3px solid;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
