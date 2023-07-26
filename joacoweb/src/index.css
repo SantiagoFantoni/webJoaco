@@ -106,3 +106,25 @@ a {
 	border-radius: 10px;
 	margin-bottom: 2rem;
 }
+.chat-button {
+	background-color: black;
+	color: gold;
+	border: 1px solid gold;
+}
+.message-buble {
+	background-color: darkgreen;
+	font-size: 2rem;
+	height: 4rem;
+	font-weight: 800;
+}
+.chat-form {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.chat-input {
+	height: 2.6rem;
+	border: none;
+	border-radius: 10px;
+	background-color: darkgray;
+}

@@ -17,15 +17,27 @@ function Chat() {
 	}
 	return (
 		<>
-			<div className='chat-box'>{recieveMessage}</div>
-			<input
-				type='text'
-				placeholder='Mensaje...'
-				onChange={(e) => {
-					setMessages(e.target.value);
-				}}
-			/>
-			<button onClick={sendMessage}>Enviar</button>
+			<div className='chat-box'>
+				<div className='message-buble'>{recieveMessage}</div>
+			</div>
+			<form
+				className='chat-form'
+				onSubmit={(e) => {
+					e.preventDefault();
+					sendMessage;
+				}}>
+				<input
+					className='chat-input'
+					type='text'
+					placeholder='Mensaje...'
+					onChange={(e) => {
+						setMessages(e.target.value);
+					}}
+				/>
+				<button className='chat-button' onClick={sendMessage}>
+					Enviar
+				</button>
+			</form>
 		</>
 	);
 }
